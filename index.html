@@ -3,444 +3,404 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thailandia — Capodanno 2026/2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Capodanno in Thailandia — Trip & Rolla</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #C9A96E;
-    --gold-light: #E8D5A3;
-    --dark: #0D0D0D;
-    --dark-2: #161616;
-    --dark-3: #1E1E1E;
-    --text: #F0EBE0;
-    --text-muted: #9A9080;
-    --teal: #4AADA8;
-    --coral: #E07B5A;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--dark);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+:root {
+  --orange: #A51931;
+  --orange-dark: #7A1225;
+  --orange-glow: rgba(165,25,49,0.15);
+  --blue: #2D2A4A;
+  --blue-mid: #3D4F8A;
+  --blue-light: rgba(61,79,138,0.15);
+  --dark: #0A0A0A;
+  --dark-2: #111111;
+  --dark-3: #1A1A1A;
+  --dark-4: #222222;
+  --text: #F2EDE4;
+  --text-muted: #7A7570;
+  --teal: #3D4F8A;
+  --coral: #A51931;
+  --gold: #A51931;
+  --gold-light: #C4253E;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--dark);
+  color:var(--text);
+  font-family:'Barlow',sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
-    background: var(--dark);
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,169,110,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: .25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp .8s .2s forwards;
-  }
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 10vw, 8rem);
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.02em;
-    color: var(--text);
-    opacity: 0;
-    animation: fadeUp .8s .4s forwards;
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .hero-sub {
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    color: var(--text-muted);
-    max-width: 480px;
-    opacity: 0;
-    animation: fadeUp .8s .6s forwards;
-  }
-  .hero-dates {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    opacity: 0;
-    animation: fadeUp .8s .8s forwards;
-  }
-  .hero-date-block { text-align: center; }
-  .hero-date-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-muted); }
-  .hero-date-val { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--text); margin-top: 2px; }
-  .hero-date-sep { color: var(--gold); font-size: 1.5rem; padding-top: 12px; }
-  .hero-cta {
-    margin-top: 3rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeUp .8s 1s forwards;
-  }
-  .btn-primary {
-    padding: 14px 32px;
-    background: var(--gold);
-    color: var(--dark);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background .2s, transform .15s;
-  }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-  .btn-outline {
-    padding: 14px 32px;
-    background: transparent;
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid rgba(240,235,224,.2);
-    cursor: pointer;
-    transition: border-color .2s, transform .15s;
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
-  .scroll-hint {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    opacity: 0;
-    animation: fadeUp .6s 1.4s forwards;
-  }
-  .scroll-hint span { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-muted); }
-  .scroll-line {
-    width: 1px; height: 40px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
-    animation: scrollPulse 2s infinite;
-  }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem;
+  position:relative;
+  background:var(--dark);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(165,25,49,0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 15% 15%, rgba(61,79,138,0.10) 0%, transparent 60%);
+  pointer-events:none;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  bottom:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--orange), var(--blue-mid), transparent);
+  opacity:0.4;
+}
+.hero-eyebrow{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.4em;
+  text-transform:uppercase;
+  color:var(--orange);
+  margin-bottom:1.5rem;
+  opacity:0;
+  animation:fadeUp .8s .2s forwards;
+}
+.hero h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(4rem,12vw,10rem);
+  font-weight:800;
+  line-height:.9;
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+  color:var(--text);
+  opacity:0;
+  animation:fadeUp .8s .4s forwards;
+}
+.hero h1 em{
+  font-style:italic;
+  color:var(--orange);
+  display:block;
+}
+.hero-sub{
+  margin-top:1.5rem;
+  font-size:.95rem;
+  font-weight:400;
+  color:var(--text-muted);
+  max-width:480px;
+  letter-spacing:.05em;
+  opacity:0;
+  animation:fadeUp .8s .6s forwards;
+}
+.hero-dates{
+  margin-top:2.5rem;
+  display:flex;
+  gap:2rem;
+  align-items:center;
+  opacity:0;
+  animation:fadeUp .8s .8s forwards;
+}
+.hero-date-block{text-align:center;}
+.hero-date-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);}
+.hero-date-val{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700;color:var(--text);margin-top:2px;letter-spacing:.05em;}
+.hero-date-sep{color:var(--orange);font-size:1.8rem;padding-top:10px;font-weight:300;}
+.hero-cta{
+  margin-top:3rem;
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content:center;
+  opacity:0;
+  animation:fadeUp .8s 1s forwards;
+}
+.btn-primary{
+  padding:14px 36px;
+  background:var(--orange);
+  color:#fff;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  transition:background .2s,transform .15s;
+  clip-path:polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);}
+.btn-outline{
+  padding:14px 36px;
+  background:transparent;
+  color:var(--text);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid rgba(242,237,228,.2);
+  cursor:pointer;
+  transition:border-color .2s,transform .15s;
+}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px);}
+.scroll-hint{
+  position:absolute;
+  bottom:2rem;left:50%;
+  transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  opacity:0;animation:fadeUp .6s 1.4s forwards;
+}
+.scroll-hint span{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--orange),var(--blue-mid),transparent);animation:scrollPulse 2s infinite;}
 
-  /* SEZIONE */
-  section { padding: 6rem 2rem; max-width: 900px; margin: 0 auto; }
-  .section-label {
-    font-size: 10px;
-    letter-spacing: .25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-  }
-  .divider {
-    width: 60px;
-    height: 1px;
-    background: var(--gold);
-    margin: 2rem 0;
-  }
+/* SEZIONE */
+section{padding:6rem 2rem;max-width:900px;margin:0 auto;}
+.section-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  color:var(--orange);
+  margin-bottom:1rem;
+}
+.section-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(2.5rem,6vw,4rem);
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:1;
+  margin-bottom:1.5rem;
+  letter-spacing:-.01em;
+}
+.divider{width:40px;height:3px;background:var(--orange);margin:2rem 0;}
 
-  /* HIGHLIGHTS */
-  .highlights {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1px;
-    background: rgba(201,169,110,.15);
-    border: 1px solid rgba(201,169,110,.15);
-    margin: 3rem 0;
-  }
-  .highlight-item {
-    background: var(--dark-2);
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-  .highlight-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .highlight-label {
-    font-size: 11px;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-top: 6px;
-  }
+/* HIGHLIGHTS */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:2px;
+  background:rgba(61,79,138,.2);
+  margin:3rem 0;
+}
+.highlight-item{
+  background:var(--dark-2);
+  padding:2rem 1.5rem;
+  text-align:center;
+  border-top:3px solid transparent;
+  transition:border-color .2s;
+}
+.highlight-item:hover{border-top-color:var(--blue-mid);}
+.highlight-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:3.5rem;
+  font-weight:800;
+  color:var(--orange);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.highlight-label{
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-top:6px;
+  font-weight:500;
+}
 
-  /* ITINERARIO */
-  .itinerary { max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
-  .phase-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 3rem 0 1.5rem;
-  }
-  .phase-line { flex: 1; height: 1px; background: rgba(201,169,110,.2); }
-  .phase-title {
-    font-size: 10px;
-    letter-spacing: .25em;
-    text-transform: uppercase;
-    color: var(--gold);
-    white-space: nowrap;
-  }
-  .day-row {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 0;
-    margin-bottom: 2px;
-    cursor: pointer;
-  }
-  .day-num-col {
-    background: var(--dark-3);
-    border: 1px solid rgba(201,169,110,.1);
-    border-right: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.2rem .5rem;
-    min-height: 72px;
-  }
-  .day-num-col .dn {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .day-num-col .dm {
-    font-size: 9px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-top: 2px;
-  }
-  .day-main {
-    background: var(--dark-2);
-    border: 1px solid rgba(201,169,110,.1);
-    padding: 1.2rem 1.5rem;
-    transition: background .2s;
-  }
-  .day-row:hover .day-main { background: var(--dark-3); }
-  .day-header-row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .day-title-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: var(--text);
-    line-height: 1.2;
-  }
-  .day-loc {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-top: 3px;
-  }
-  .day-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: .5rem; }
-  .tag {
-    font-size: 10px;
-    padding: 2px 8px;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    border: 1px solid;
-  }
-  .tag-a { border-color: var(--teal); color: var(--teal); }
-  .tag-r { border-color: rgba(240,235,224,.3); color: var(--text-muted); }
-  .tag-p { border-color: var(--coral); color: var(--coral); }
-  .tag-t { border-color: rgba(201,169,110,.4); color: var(--gold); }
-  .tag-s { border-color: #C87DB8; color: #C87DB8; }
-  .chev-icon {
-    color: var(--text-muted);
-    font-size: 18px;
-    transition: transform .25s;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .day-body {
-    display: none;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(201,169,110,.1);
-    margin-top: 1rem;
-  }
-  .day-body.open { display: block; }
-  .chev-icon.open { transform: rotate(180deg); }
-  .activity-list { display: flex; flex-direction: column; gap: .75rem; }
-  .act {
-    display: flex;
-    gap: .75rem;
-    align-items: flex-start;
-    padding: .75rem;
-    background: rgba(255,255,255,.02);
-    border-left: 2px solid rgba(201,169,110,.3);
-  }
-  .act-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
-  .act-name { font-size: .875rem; font-weight: 500; color: var(--text); }
-  .act-desc { font-size: .8rem; color: var(--text-muted); margin-top: 3px; line-height: 1.5; }
-  .act-cost { font-size: .75rem; color: var(--gold); margin-top: 4px; }
-  .tip {
-    margin-top: 1rem;
-    padding: .75rem 1rem;
-    border-left: 2px solid var(--gold);
-    background: rgba(201,169,110,.05);
-    font-size: .8rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-  .tip strong { color: var(--text); font-weight: 500; }
+/* ITINERARIO */
+.itinerary{max-width:900px;margin:0 auto;padding:0 2rem 6rem;}
+.phase-header{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.5rem;}
+.phase-line{flex:1;height:1px;background:rgba(61,79,138,.25);}
+.phase-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:.3em;text-transform:uppercase;
+  color:var(--blue-mid);white-space:nowrap;
+}
+.day-row{
+  display:grid;grid-template-columns:72px 1fr;
+  gap:0;margin-bottom:2px;cursor:pointer;
+}
+.day-num-col{
+  background:var(--dark-3);
+  border:1px solid rgba(232,82,26,.15);
+  border-right:none;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:1.2rem .5rem;min-height:72px;
+  transition:background .2s;
+}
+.day-row:hover .day-num-col{background:rgba(61,79,138,.1);}
+.day-num-col .dn{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2.2rem;font-weight:800;
+  color:var(--orange);line-height:1;
+}
+.day-num-col .dm{
+  font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-muted);margin-top:2px;
+  font-weight:500;
+}
+.day-main{
+  background:var(--dark-2);
+  border:1px solid rgba(232,82,26,.1);
+  padding:1.2rem 1.5rem;transition:background .2s;
+}
+.day-row:hover .day-main{background:var(--dark-3);}
+.day-header-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;}
+.day-title-text{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.4rem;font-weight:700;
+  text-transform:uppercase;
+  color:var(--text);line-height:1.1;letter-spacing:.02em;
+}
+.day-loc{font-size:11px;color:var(--text-muted);margin-top:3px;letter-spacing:.05em;}
+.day-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:.5rem;}
+.tag{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;padding:2px 8px;
+  letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid;font-weight:600;
+}
+.tag-a{border-color:var(--blue-mid);color:var(--blue-mid);}
+.tag-r{border-color:rgba(242,237,228,.2);color:var(--text-muted);}
+.tag-p{border-color:var(--orange);color:var(--orange);}
+.tag-t{border-color:rgba(61,79,138,.6);color:var(--blue-mid);}
+.tag-s{border-color:#C87DB8;color:#C87DB8;}
+.chev-icon{color:var(--text-muted);font-size:18px;transition:transform .25s;flex-shrink:0;margin-top:2px;}
+.day-body{display:none;padding-top:1rem;border-top:1px solid rgba(232,82,26,.1);margin-top:1rem;}
+.day-body.open{display:block;}
+.chev-icon.open{transform:rotate(180deg);}
+.activity-list{display:flex;flex-direction:column;gap:.75rem;}
+.act{
+  display:flex;gap:.75rem;align-items:flex-start;
+  padding:.75rem;
+  background:rgba(255,255,255,.02);
+  border-left:3px solid rgba(61,79,138,.5);
+}
+.act-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px;}
+.act-name{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;color:var(--text);letter-spacing:.04em;}
+.act-desc{font-size:.8rem;color:var(--text-muted);margin-top:3px;line-height:1.6;}
+.act-cost{font-size:.75rem;color:var(--orange);margin-top:4px;}
+.tip{
+  margin-top:1rem;padding:.75rem 1rem;
+  border-left:3px solid var(--orange);
+  background:rgba(232,82,26,.05);
+  font-size:.8rem;color:var(--text-muted);line-height:1.6;
+}
+.tip strong{color:var(--text);font-weight:500;}
 
-  /* VOLI */
-  .flights-section { background: var(--dark-2); padding: 4rem 2rem; }
-  .flights-inner { max-width: 900px; margin: 0 auto; }
-  .flight-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: rgba(201,169,110,.15); margin-top: 2rem; }
-  .flight-card {
-    background: var(--dark-3);
-    padding: 2rem;
-  }
-  .flight-route {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .flight-city { text-align: center; }
-  .flight-iata {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--gold);
-  }
-  .flight-city-name { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
-  .flight-arrow { color: var(--gold); font-size: 1.2rem; flex: 1; text-align: center; }
-  .flight-detail { display: flex; justify-content: space-between; margin-top: .5rem; }
-  .fd-label { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
-  .fd-val { font-size: .875rem; color: var(--text); margin-top: 2px; }
-  .flight-note { font-size: .75rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.5; border-top: 1px solid rgba(255,255,255,.06); padding-top: 1rem; }
+/* VOLI */
+.flights-section{background:var(--dark-2);padding:4rem 2rem;}
+.flights-inner{max-width:900px;margin:0 auto;}
+.flight-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:rgba(61,79,138,.2);margin-top:2rem;}
+.flight-card{background:var(--dark-3);padding:2rem;}
+.flight-route{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;}
+.flight-city{text-align:center;}
+.flight-iata{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2.5rem;font-weight:800;
+  color:var(--orange);letter-spacing:.05em;
+}
+.flight-city-name{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:2px;}
+.flight-arrow{color:var(--orange);font-size:1.5rem;flex:1;text-align:center;font-weight:300;}
+.flight-detail{display:flex;justify-content:space-between;margin-top:.5rem;}
+.fd-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);}
+.fd-val{font-size:.875rem;color:var(--text);margin-top:2px;}
+.flight-note{font-size:.75rem;color:var(--text-muted);margin-top:1rem;line-height:1.5;border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;}
 
-  /* BUDGET */
-  .budget-section { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
-  .budget-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: rgba(201,169,110,.15); border: 1px solid rgba(201,169,110,.15); margin: 2rem 0; }
-  .budget-item { background: var(--dark-2); padding: 1.5rem; }
-  .budget-cat { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); }
-  .budget-val { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--text); margin-top: 4px; }
-  .budget-val span { font-size: 1rem; color: var(--text-muted); }
-  .budget-sub { font-size: .75rem; color: var(--text-muted); margin-top: 4px; }
-  .budget-total { background: var(--dark-3); border: 1px solid var(--gold); padding: 2rem; text-align: center; margin-top: 2rem; }
-  .budget-total-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-muted); }
-  .budget-total-val { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--gold); margin-top: 8px; }
-  .budget-total-note { font-size: .8rem; color: var(--text-muted); margin-top: 8px; }
+/* BUDGET */
+.budget-section{max-width:900px;margin:0 auto;padding:4rem 2rem;}
+.budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(232,82,26,.15);border:none;margin:2rem 0;}
+.budget-item{background:var(--dark-2);padding:1.5rem;border-top:3px solid var(--blue-mid);transition:border-color .2s;}
+.budget-item:hover{border-top-color:var(--orange);}
+.budget-cat{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-mid);font-weight:600;}
+.budget-val{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:800;color:var(--orange);margin-top:4px;line-height:1;}
+.budget-val span{font-size:1rem;color:var(--text-muted);}
+.budget-sub{font-size:.75rem;color:var(--text-muted);margin-top:6px;}
+.budget-total{background:var(--dark-3);border:2px solid var(--orange);padding:2rem;text-align:center;margin-top:2rem;}
+.budget-total-label{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--text-muted);font-weight:600;}
+.budget-total-val{font-family:'Barlow Condensed',sans-serif;font-size:4rem;font-weight:800;color:var(--orange);margin-top:8px;line-height:1;}
+.budget-total-note{font-size:.8rem;color:var(--text-muted);margin-top:8px;}
 
-  /* INFO UTILI */
-  .info-section { background: var(--dark-2); padding: 5rem 2rem; }
-  .info-inner { max-width: 900px; margin: 0 auto; }
-  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; margin-top: 2.5rem; }
-  .info-card {
-    background: var(--dark-3);
-    padding: 2rem;
-    border-top: 2px solid rgba(201,169,110,.2);
-  }
-  .info-icon { font-size: 1.5rem; margin-bottom: 1rem; }
-  .info-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: .75rem;
-  }
-  .info-body { font-size: .825rem; color: var(--text-muted); line-height: 1.7; }
-  .info-body a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,169,110,.3); }
-  .info-body a:hover { border-color: var(--gold); }
-  .info-body strong { color: var(--text); font-weight: 500; }
-  .info-alert {
-    margin-top: 1rem;
-    padding: .75rem;
-    background: rgba(201,169,110,.06);
-    border-left: 2px solid var(--gold);
-    font-size: .775rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
+/* INFO UTILI */
+.info-section{background:var(--dark-2);padding:5rem 2rem;}
+.info-inner{max-width:900px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-top:2.5rem;}
+.info-card{background:var(--dark-3);padding:2rem;border-top:3px solid rgba(61,79,138,.5);}
+.info-icon{font-size:1.5rem;margin-bottom:1rem;}
+.info-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.25rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;
+  color:var(--text);margin-bottom:.75rem;
+}
+.info-body{font-size:.825rem;color:var(--text-muted);line-height:1.7;}
+.info-body a{color:var(--blue-mid);text-decoration:none;border-bottom:1px solid rgba(61,79,138,.3);}
+.info-body a:hover{border-color:var(--blue-mid);}
+.info-body strong{color:var(--text);font-weight:500;}
+.info-alert{
+  margin-top:1rem;padding:.75rem;
+  background:rgba(232,82,26,.06);
+  border-left:3px solid var(--orange);
+  font-size:.775rem;color:var(--text-muted);line-height:1.6;
+}
 
-  /* COSA PORTARE */
-  .pack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: rgba(201,169,110,.1); margin-top: 2rem; }
-  .pack-col { background: var(--dark-2); padding: 1.5rem; }
-  .pack-col-title { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-  .pack-col ul { list-style: none; }
-  .pack-col ul li { font-size: .825rem; color: var(--text-muted); padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,.04); line-height: 1.4; }
-  .pack-col ul li::before { content: '—'; color: var(--gold); margin-right: 8px; font-size: .7rem; }
+/* COSA PORTARE */
+.pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;background:rgba(232,82,26,.1);margin-top:2rem;}
+.pack-col{background:var(--dark-2);padding:1.5rem;}
+.pack-col-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--blue-mid);
+  margin-bottom:1rem;font-weight:700;
+}
+.pack-col ul{list-style:none;}
+.pack-col ul li{font-size:.825rem;color:var(--text-muted);padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04);line-height:1.4;}
+.pack-col ul li::before{content:'→';color:var(--orange);margin-right:8px;font-size:.7rem;}
 
-  /* FOOTER */
-  footer {
-    border-top: 1px solid rgba(201,169,110,.15);
-    padding: 3rem 2rem;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  footer p { font-size: .8rem; color: var(--text-muted); line-height: 1.8; }
-  footer strong { color: var(--text); font-weight: 500; }
+/* FOOTER */
+footer{border-top:1px solid rgba(232,82,26,.2);padding:3rem 2rem;text-align:center;max-width:900px;margin:0 auto;}
+footer p{font-size:.8rem;color:var(--text-muted);line-height:1.8;}
+footer strong{color:var(--text);font-weight:500;}
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes scrollPulse {
-    0%, 100% { opacity: .3; } 50% { opacity: 1; }
-  }
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes scrollPulse{
+  0%,100%{opacity:.3;}50%{opacity:1;}
+}
 
-  @media (max-width: 600px) {
-    .hero h1 { font-size: 3rem; }
-    .hero-dates { gap: 1rem; }
-    .day-row { grid-template-columns: 56px 1fr; }
-    .day-num-col .dn { font-size: 1.5rem; }
-  }
+@media(max-width:600px){
+  .hero h1{font-size:3.5rem;}
+  .hero-dates{gap:1rem;}
+  .day-row{grid-template-columns:56px 1fr;}
+  .day-num-col .dn{font-size:1.8rem;}
+  .budget-grid{grid-template-columns:1fr 1fr;}
+}
 </style>
 </head>
 <body>
 
 <!-- HERO -->
 <header class="hero">
-  <p class="hero-eyebrow">Viaggio di gruppo · 12 persone · Mar delle Andamane</p>
-  <h1>Thailandia<br><em>Capodanno</em></h1>
+  <div style="margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s .2s forwards;">
+    <span style="font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:#F2EDE4;">TRIP&amp;ROLLA</span>
+  </div>
+  <h1>Capodanno<br><em>in Thailandia</em></h1>
   <p class="hero-sub">Phuket · Krabi · Koh Lanta · Phi Phi · Bangkok<br>Isole, avventura, island hopping e un Capodanno indimenticabile</p>
   <div class="hero-dates">
     <div class="hero-date-block">
@@ -466,570 +426,506 @@
 <!-- HIGHLIGHTS -->
 <section>
   <p class="section-label">Il viaggio in numeri</p>
-  <h2 class="section-title">Un itinerario<br>progettato per voi</h2>
+  <h2 class="section-title">Un itinerario<br>costruito per voi</h2>
   <div class="divider"></div>
   <div class="highlights">
-    <div class="highlight-item">
-      <div class="highlight-num">12</div>
-      <div class="highlight-label">Notti</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-num">5</div>
-      <div class="highlight-label">Destinazioni</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-num">6+</div>
-      <div class="highlight-label">Esperienze uniche</div>
-    </div>
-    <div class="highlight-item">
-      <div class="highlight-num">31</div>
-      <div class="highlight-label">Capodanno sull'isola</div>
-    </div>
+    <div class="highlight-item"><div class="highlight-num">12</div><div class="highlight-label">Notti</div></div>
+    <div class="highlight-item"><div class="highlight-num">5</div><div class="highlight-label">Destinazioni</div></div>
+    <div class="highlight-item"><div class="highlight-num">6+</div><div class="highlight-label">Esperienze uniche</div></div>
+    <div class="highlight-item"><div class="highlight-num">31</div><div class="highlight-label">Capodanno sull'isola</div></div>
   </div>
   <p style="color:var(--text-muted);font-size:.9rem;max-width:600px;">Da Phuket alle isole selvagge di Koh Lanta, dall'Emerald Cave a Phi Phi, fino ai templi di Bangkok e alle rovine di Ayutthaya. Un viaggio che bilancia avventura, relax e divertimento — con il Capodanno più bello della vita.</p>
+</section>
+
+<!-- TESTO EVOCATIVO -->
+<section style="padding:5rem 2rem;max-width:900px;margin:0 auto;border-top:1px solid rgba(232,82,26,.1);">
+  <p class="section-label">Non una vacanza</p>
+  <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;text-transform:uppercase;line-height:1;margin-bottom:2rem;">Un viaggio.<br><em style="color:var(--orange);">Un viaggio vero.</em></h2>
+  <div class="divider"></div>
+  <div style="max-width:640px;color:var(--text-muted);font-size:1rem;line-height:1.9;display:flex;flex-direction:column;gap:1.5rem;">
+    <p>La vacanza è un posto. Il viaggio è uno stato mentale.</p>
+    <p>Non stiamo andando in Thailandia per rilassarci. Ci andiamo per svegliarci. Per ricordarci come si sta al mondo quando smetti di guardarlo attraverso uno schermo.</p>
+    <p>Nuoterai nel buio assoluto. Ottanta metri di tunnel marino, zero visibilità, e poi — esplosione. Una laguna segreta che non esiste su Google Maps. Il 31 dicembre guarderai il tramonto da un'isola e capirai una cosa semplice: quel momento non si compra, non si filtra, non si condivide. Si vive e basta.</p>
+    <p>La Thailandia ti entra dentro e non te la scrolli più di dosso. I templi dorati alle sei di mattina quando ancora non c'è nessuno. Gli elefanti nella giungla — non in uno zoo, nella giungla. Il caos di Bangkok che ti fa sentire più vivo di quanto ti sia mai sentito in qualsiasi città europea.</p>
+    <p style="border-left:3px solid var(--orange);padding-left:1.25rem;font-style:italic;">Un viaggio autentico non va sempre come previsto. Un traghetto che parte in ritardo, un temporale improvviso, una strada che finisce nel nulla. Sono questi i momenti che ricordi — non quelli che hai pianificato. L'autenticità non è una scenografia. È quello che succede quando smetti di controllare e inizi ad accettare.</p>
+    <p>Poi ci sono le persone. Quelle che non sapevi che esistevano prima di questo viaggio. Un gruppo non è una comitiva — è il posto dove nascono le amicizie che reggono davvero, perché sono nate in mezzo a qualcosa di vero.</p>
+    <blockquote style="border-left:3px solid var(--blue-mid);padding:1.25rem 1.5rem;margin:1.5rem 0 0;background:rgba(61,79,138,.05);">
+      <p style="font-family:'Barlow',sans-serif;font-size:1.1rem;font-weight:300;font-style:italic;color:var(--text);line-height:1.9;">"Quando qualcuno mi chiede: &ldquo;Cos'è un Trip&amp;Rolla?&rdquo; glielo dico. Non è solo spiagge, cocktail e foto per Instagram. Oh no, è molto di più amico mio. Piace a tutti viaggiare: qualcuno vuole il relax, qualcun altro l'avventura, altri la cultura, il cibo, le feste o semplicemente sparire per un po'. Ma un Trip &amp; Rolla... oh è diverso. Perché un vero Trip &amp; Rolla vuole tutto."</p>
+      <p style="font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-top:.75rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;">— Trip &amp; Rolla</p>
+    </blockquote>
+  </div>
 </section>
 
 <!-- ITINERARIO -->
 <div class="itinerary" id="itinerario">
   <p class="section-label">Giorno per giorno</p>
-  <h2 class="section-title" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;line-height:1.1;margin-bottom:.5rem;">Il programma<br><em style="color:var(--gold);">completo</em></h2>
+  <h2 class="section-title" style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;text-transform:uppercase;line-height:1;margin-bottom:.5rem;">Il programma<br><em style="color:var(--orange);">completo</em></h2>
   <div class="divider"></div>
 
-  <!-- FASE 1 -->
-  <div class="phase-header">
-    <div class="phase-line"></div>
-    <div class="phase-title">Fase 1 — Phuket · 29–30 dic</div>
-    <div class="phase-line"></div>
-  </div>
+  <div class="phase-header"><div class="phase-line"></div><div class="phase-title">Fase 1 — Phuket · 29–30 dic</div><div class="phase-line"></div></div>
 
-  <!-- G29 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">29</span><span class="dm">Dic</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Arrivo a Phuket</div>
-          <div class="day-loc">Aeroporto di Phuket · Check-in · Prima serata</div>
-          <div class="day-tags"><span class="tag tag-t">transfer</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">✈️</span><div><div class="act-name">Volo Roma → Phuket (scalo)</div><div class="act-desc">Arrivo in serata. Transfer in Grab (app taxi locale) verso la zona di Kata Beach o Karon — più tranquille e più economiche di Patong.</div></div></div>
-          <div class="act"><span class="act-icon">🏨</span><div><div class="act-name">Check-in guesthouse con piscina</div><div class="act-desc">Zona Kata / Karon Beach. Guesthouse con piscina ~600–800 baht/notte a persona. Prima cena di gruppo con pad thai da strada.</div></div></div>
-        </div>
-        <div class="tip"><strong>Consiglio:</strong> Scaricare Grab prima di partire dall'Italia. Risparmia il 50% rispetto ai taxi ufficiali.</div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Arrivo a Phuket</div><div class="day-loc">Aeroporto di Phuket · Check-in · Prima serata</div><div class="day-tags"><span class="tag tag-t">transfer</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">✈️</span><div><div class="act-name">Volo Roma → Phuket</div><div class="act-desc">Arrivo in serata. Transfer verso la zona di Kata Beach o Karon.</div></div></div>
+        <div class="act"><span class="act-icon">🏨</span><div><div class="act-name">Check-in guesthouse con piscina</div><div class="act-desc">Zona Kata / Karon Beach. Prima cena di gruppo con street food thai.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G30 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">30</span><span class="dm">Dic</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Big Buddha + Phang Nga Bay in kayak</div>
-          <div class="day-loc">Phuket · Cultura e natura</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🏛️</span><div><div class="act-name">Mattina: Big Buddha + Old Phuket Town</div><div class="act-desc">In scooter su per la collina. Panorama sulla penisola al mattino presto. Poi colazione nella Old Town con strade coloniali sino-portoghesi.</div></div></div>
-          <div class="act"><span class="act-icon">🚣</span><div><div class="act-name">Pomeriggio: kayak a Phang Nga Bay</div><div class="act-desc">Tour condiviso in longtail + kayak tra faraglioni calcarei e grotte marine. James Bond Island inclusa. Uno dei paesaggi più surreali della Thailandia.</div></div></div>
-          <div class="act"><span class="act-icon">🌅</span><div><div class="act-name">Sera: Promthep Cape al tramonto</div><div class="act-desc">Il punto più a sud di Phuket, il tramonto più fotografato dell'isola. Poi cena di pesce fresco al Rawai Market.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Big Buddha + Phang Nga Bay in kayak</div><div class="day-loc">Phuket · Cultura e natura</div><div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🏛️</span><div><div class="act-name">Mattina: Big Buddha + Old Phuket Town</div><div class="act-desc">In scooter su per la collina. Panorama sulla penisola al mattino presto. Colazione nella Old Town con strade coloniali sino-portoghesi.</div></div></div>
+        <div class="act"><span class="act-icon">🚣</span><div><div class="act-name">Pomeriggio: kayak a Phang Nga Bay</div><div class="act-desc">Tour in longtail + kayak tra faraglioni calcarei e grotte marine. James Bond Island inclusa.</div></div></div>
+        <div class="act"><span class="act-icon">🏘️</span><div><div class="act-name">Koh Panyee — il villaggio galleggiante</div><div class="act-desc">Villaggio musulmano costruito interamente su palafitte nella baia di Phang Nga. 1.700 abitanti, una moschea, una scuola e un campo da calcio sul mare. Uno dei posti più surreali e autentici della Thailandia. Solitamente incluso nei tour di Phang Nga Bay — stessa barca, zero logistica aggiuntiva.</div></div></div>
+        <div class="act"><span class="act-icon">🌅</span><div><div class="act-name">Sera: Promthep Cape al tramonto <span style="font-size:.75rem;padding:1px 7px;border:1px solid rgba(61,79,138,.5);color:var(--blue-mid);font-weight:600;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;">opzionale</span></div><div class="act-desc">Il punto più a sud di Phuket, il tramonto più fotografato dell'isola. Da valutare in base ai ritmi della giornata — se Phang Nga + Koh Panyee hanno preso tutta l'energia, si può saltare senza rimpianti. Cena di pesce fresco al Rawai Market comunque consigliata.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- FASE 2 -->
-  <div class="phase-header">
-    <div class="phase-line"></div>
-    <div class="phase-title">Fase 2 — Krabi · Koh Lanta · 31 dic – 2 gen</div>
-    <div class="phase-line"></div>
-  </div>
+  <div class="phase-header"><div class="phase-line"></div><div class="phase-title">Fase 2 — Krabi · Koh Lanta · 31 dic – 2 gen</div><div class="phase-line"></div></div>
 
-  <!-- G31 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">31</span><span class="dm">Dic</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Railay Beach + Koh Lanta · Capodanno</div>
-          <div class="day-loc">Transfer Phuket → Krabi → Koh Lanta</div>
-          <div class="day-tags"><span class="tag tag-s">speciale</span><span class="tag tag-a">avventura</span><span class="tag tag-p">party</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Mattina: speedboat Phuket → Krabi (2h)</div><div class="act-desc">Da Krabi breve barca per Railay Beach — raggiungibile solo via mare, circondata da faraglioni alti 300 metri.</div></div></div>
-          <div class="act"><span class="act-icon">🏖️</span><div><div class="act-name">Pomeriggio: traghetto Krabi → Koh Lanta</div><div class="act-desc">Arrivo sull'isola, check-in in resort sulla spiaggia. Tramonto da Long Beach.</div></div></div>
-          <div class="act"><span class="act-icon">🎆</span><div><div class="act-name">Notte: Capodanno su Koh Lanta</div><div class="act-desc">Beach bar sulla costa ovest con lanterne volanti, fuochi d'artificio sul mare delle Andamane, musica e cocktail con i piedi nella sabbia. Atmosfera raccolta e vera, lontana dai mega-party commerciali.</div></div></div>
-        </div>
-        <div class="tip"><strong>Perché Koh Lanta?</strong> A questo budget è la scelta perfetta: Phuket a Capodanno triplica i prezzi e fa pagare 100€+ per entrare nei beach club. Koh Lanta offre la stessa magia a costi reali.</div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Railay Beach + Koh Lanta · Capodanno</div><div class="day-loc">Transfer Phuket → Krabi → Koh Lanta</div><div class="day-tags"><span class="tag tag-s">speciale</span><span class="tag tag-a">avventura</span><span class="tag tag-p">party</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Mattina: speedboat Phuket → Krabi</div><div class="act-desc">Da Krabi breve barca per Railay Beach — raggiungibile solo via mare, circondata da faraglioni alti 300 metri.</div></div></div>
+        <div class="act"><span class="act-icon">🏖️</span><div><div class="act-name">Pomeriggio: traghetto Krabi → Koh Lanta</div><div class="act-desc">Arrivo sull'isola, check-in in resort sulla spiaggia. Tramonto da Long Beach.</div></div></div>
+        <div class="act"><span class="act-icon">🎆</span><div><div class="act-name">Notte: Capodanno su Koh Lanta</div><div class="act-desc">Beach bar sulla costa ovest con lanterne volanti, fuochi d'artificio sul mare delle Andamane, musica e cocktail con i piedi nella sabbia.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G1 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">1</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Island hopping + Emerald Cave</div>
-          <div class="day-loc">Koh Mook · Koh Kradan · Koh Chuck · Tham Morakot</div>
-          <div class="day-tags"><span class="tag tag-s">speciale</span><span class="tag tag-a">avventura</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🦇</span><div><div class="act-name">Emerald Cave — Tham Morakot</div><div class="act-desc">80 metri di nuoto nel buio totale attraverso un tunnel marino. Si sbuca in una laguna segreta circondata da pareti rocciose. Il modo migliore per iniziare l'anno: dal buio alla luce.</div></div></div>
-          <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Island hopping: Koh Mook, Koh Kradan, Koh Chuck</div><div class="act-desc">Snorkeling su barriere coralline incontaminate, pranzo sulla spiaggia, nuoto libero. L'arcipelago di Trang è tra i meno touristici di tutto il Mar delle Andamane.</div></div></div>
-          <div class="act"><span class="act-icon">🍹</span><div><div class="act-name">Tramonto: beach bar su Koh Lanta</div><div class="act-desc">Bean bag, cocktail, sole che tramonta sul mare. Il 1° gennaio non serve altro.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Island hopping + Emerald Cave</div><div class="day-loc">Koh Mook · Koh Kradan · Koh Chuck · Tham Morakot</div><div class="day-tags"><span class="tag tag-s">speciale</span><span class="tag tag-a">avventura</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🦇</span><div><div class="act-name">Emerald Cave — Tham Morakot</div><div class="act-desc">80 metri di nuoto nel buio totale attraverso un tunnel marino. Si sbuca in una laguna segreta circondata da pareti rocciose. Dal buio alla luce.</div></div></div>
+        <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Island hopping: Koh Mook, Koh Kradan, Koh Chuck</div><div class="act-desc">Snorkeling su barriere coralline incontaminate, pranzo sulla spiaggia, nuoto libero.</div></div></div>
+        <div class="act"><span class="act-icon">🍹</span><div><div class="act-name">Tramonto: beach bar su Koh Lanta</div><div class="act-desc">Bean bag, cocktail, sole che tramonta sul mare. Il 1° gennaio non serve altro.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G2 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">2</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Koh Rok — Il paradiso incontaminato</div>
-          <div class="day-loc">Koh Rok Nai · Koh Rok Nok · Parco Nazionale Marino</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🐠</span><div><div class="act-name">Escursione a Koh Rok</div><div class="act-desc">45 minuti di speedboat da Koh Lanta. Due isolette protette dal parco marino. Barriera corallina a pochi metri dalla riva, sabbia bianchissima, zero strutture commerciali. Portare acqua, cibo e crema solare.</div></div></div>
-        </div>
-        <div class="tip"><strong>Attenzione:</strong> Koh Rok ha accesso limitato nel periodo natalizio. Prenotare il giorno prima tramite gli operatori locali sulla spiaggia di Koh Lanta.</div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Koh Rok — Il paradiso incontaminato</div><div class="day-loc">Koh Rok Nai · Koh Rok Nok · Parco Nazionale Marino</div><div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🐠</span><div><div class="act-name">Escursione a Koh Rok <span style="font-size:.75rem;padding:1px 7px;border:1px solid rgba(165,25,49,.4);color:var(--orange);font-weight:600;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;">da prenotare</span></div><div class="act-desc">45 minuti di speedboat da Koh Lanta. Due isolette protette dal parco marino. Barriera corallina a pochi metri dalla riva, sabbia bianchissima, zero strutture. Accesso limitato nel periodo natalizio — prenotare il giorno prima. Se il gruppo è stanco dopo Koh Lanta e island hopping, si può sostituire con una giornata libera sull'isola.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- FASE 3 -->
-  <div class="phase-header">
-    <div class="phase-line"></div>
-    <div class="phase-title">Fase 3 — Phi Phi Island · 3–4 gen</div>
-    <div class="phase-line"></div>
+  <div class="day-row" onclick="tog(this)">
+    <div class="day-num-col"><span class="dn">2+</span><span class="dm">Koh Yao</span></div>
+    <div class="day-main">
+      <div class="day-header-row"><div><div class="day-title-text">Koh Yao Noi — l'isola autentica</div><div class="day-loc">Tra Phuket e Krabi · Fuori dal turismo di massa</div><div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🚤</span><div><div class="act-name">Koh Yao Noi — l'isola dei pescatori <span style="font-size:.75rem;padding:1px 7px;border:1px solid rgba(61,79,138,.5);color:var(--blue-mid);font-weight:600;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;">opzionale</span></div><div class="act-desc">Piccola isola musulmana tra Phuket e Krabi, quasi ignorata dal turismo di massa. Villaggi di pescatori, risaie, bufali sulla spiaggia e vista sulla baia di Phang Nga. Si consiglia di visitarla il 31 mattina durante il trasferimento Phuket → Krabi, che passa proprio lì — ottimizza i tempi senza aggiungere un giorno separato.</div></div></div>
+        <div class="act"><span class="act-icon">🕌</span><div><div class="act-name">Cultura locale autentica</div><div class="act-desc">Koh Yao Noi è una delle poche isole del sud rimaste autentiche. I locali vivono ancora di pesca e agricoltura. Un ritmo completamente diverso rispetto alle isole turistiche — uno dei momenti più veri del viaggio.</div></div></div>
+      </div></div>
+    </div>
   </div>
 
-  <!-- G3 -->
+  <div class="phase-header"><div class="phase-line"></div><div class="phase-title">Fase 3 — Phi Phi Island · 3–4 gen</div><div class="phase-line"></div></div>
+
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">3</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Maya Bay all'alba + Phi Phi Don</div>
-          <div class="day-loc">Koh Lanta → Phi Phi · Speedboat</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-p">party</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Mattina: speedboat Koh Lanta → Phi Phi (1h30)</div><div class="act-desc">Arrivare presto a Maya Bay — la coda dei tour giornalieri inizia dalle 10:30. All'alba si è praticamente soli nella baia più famosa della Thailandia.</div></div></div>
-          <div class="act"><span class="act-icon">🏔️</span><div><div class="act-name">Viewpoint di Phi Phi Don</div><div class="act-desc">20 minuti a piedi per la vista sull'istmo con le due baie turchesi ai lati. Una delle immagini più iconiche di tutta la Thailandia.</div></div></div>
-          <div class="act"><span class="act-icon">🎵</span><div><div class="act-name">Sera: fire show e beach bar a Ton Sai</div><div class="act-desc">Phi Phi di notte con spettacoli di fuoco, musica e beach bar. Meno caotica di Patong, perfetta per una serata di gruppo.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Maya Bay all'alba + Phi Phi Don</div><div class="day-loc">Koh Lanta → Phi Phi · Speedboat</div><div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-p">party</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Speedboat Koh Lanta → Phi Phi</div><div class="act-desc">Arrivare presto a Maya Bay — all'alba si è praticamente soli nella baia più famosa della Thailandia.</div></div></div>
+        <div class="act"><span class="act-icon">🏔️</span><div><div class="act-name">Viewpoint di Phi Phi Don</div><div class="act-desc">20 minuti a piedi per la vista sull'istmo con le due baie turchesi ai lati.</div></div></div>
+        <div class="act"><span class="act-icon">🎵</span><div><div class="act-name">Sera: fire show e beach bar a Ton Sai</div><div class="act-desc">Phi Phi di notte con spettacoli di fuoco, musica e beach bar.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G4 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">4</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Viking Cave + Lo Bakao Beach</div>
-          <div class="day-loc">Phi Phi · Giornata libera sull'isola</div>
-          <div class="day-tags"><span class="tag tag-r">relax</span><span class="tag tag-a">avventura</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🏺</span><div><div class="act-name">Mattina: Viking Cave</div><div class="act-desc">Tour in barca alla grotta con geroglifici antichi e nidi di rondine. Poi Laem Tong Beach, la spiaggia più tranquilla dell'isola.</div></div></div>
-          <div class="act"><span class="act-icon">🏖️</span><div><div class="act-name">Pomeriggio: Lo Bakao Beach</div><div class="act-desc">La spiaggia più lunga di Phi Phi Don, poco affollata. Sdraio, cocco fresco, niente da fare. Il relax che serve dopo giorni di avventura.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Viking Cave + Lo Bakao Beach</div><div class="day-loc">Phi Phi · Giornata libera sull'isola</div><div class="day-tags"><span class="tag tag-r">relax</span><span class="tag tag-a">avventura</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🏺</span><div><div class="act-name">Mattina: Viking Cave</div><div class="act-desc">Tour in barca alla grotta con geroglifici antichi e nidi di rondine. Poi Laem Tong Beach.</div></div></div>
+        <div class="act"><span class="act-icon">🏖️</span><div><div class="act-name">Pomeriggio: Lo Bakao Beach</div><div class="act-desc">La spiaggia più lunga di Phi Phi Don, poco affollata. Sdraio, cocco fresco, niente da fare.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- FASE 4 -->
-  <div class="phase-header">
-    <div class="phase-line"></div>
-    <div class="phase-title">Fase 4 — Krabi + Transfer nord · 5–6 gen</div>
-    <div class="phase-line"></div>
-  </div>
+  <div class="phase-header"><div class="phase-line"></div><div class="phase-title">Fase 4 — Krabi + Transfer nord · 5–6 gen</div><div class="phase-line"></div></div>
 
-  <!-- G5 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">5</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Tiger Cave Temple + Emerald Pool</div>
-          <div class="day-loc">Krabi · 1237 gradini e piscina naturale nella giungla</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Mattina: traghetto Phi Phi → Krabi (1h30)</div><div class="act-desc">Check-in a Krabi Town o Ao Nang, più economici rispetto alle isole.</div></div></div>
-          <div class="act"><span class="act-icon">⛰️</span><div><div class="act-name">Tiger Cave Temple — Wat Tham Suea</div><div class="act-desc">1237 gradini con vista sulla pianura e il mare. La scalata più impegnativa del viaggio — si arriva ansimando, si torna in silenzio.</div></div></div>
-          <div class="act"><span class="act-icon">💧</span><div><div class="act-name">Emerald Pool — piscina naturale</div><div class="act-desc">Acqua termale verde brillante immersa nella giungla. Bagno naturale imperdibile. Poi la Blue Pool ancora più nascosta.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Tiger Cave Temple + Emerald Pool</div><div class="day-loc">Krabi · 1237 gradini e piscina naturale nella giungla</div><div class="day-tags"><span class="tag tag-a">avventura</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Traghetto Phi Phi → Krabi</div><div class="act-desc">Check-in a Krabi Town o Ao Nang.</div></div></div>
+        <div class="act"><span class="act-icon">⛰️</span><div><div class="act-name">Tiger Cave Temple — Wat Tham Suea</div><div class="act-desc">1237 gradini con vista sulla pianura e il mare. Si arriva ansimando, si torna in silenzio.</div></div></div>
+        <div class="act"><span class="act-icon">💧</span><div><div class="act-name">Emerald Pool — piscina naturale</div><div class="act-desc">Acqua termale verde brillante immersa nella giungla. Poi la Blue Pool ancora più nascosta.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G6 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">6</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Volo interno Krabi → Bangkok</div>
-          <div class="day-loc">Transfer + Prima sera nella capitale</div>
-          <div class="day-tags"><span class="tag tag-t">transfer</span><span class="tag tag-p">party</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">✈️</span><div><div class="act-name">Volo interno Krabi → Bangkok (1h)</div><div class="act-desc">AirAsia o Bangkok Airways. Da prenotare in anticipo. Check-in zona Silom o Sukhumvit.</div></div></div>
-          <div class="act"><span class="act-icon">🌃</span><div><div class="act-name">Sera: rooftop bar + cena a Chinatown</div><div class="act-desc">Un cocktail a 240 metri per il primo impatto con Bangkok. Poi cena di street food a Yaowarat Road — granchi, gamberi, pad thai dalla strada.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Volo interno Krabi → Bangkok</div><div class="day-loc">Transfer + Prima sera nella capitale</div><div class="day-tags"><span class="tag tag-t">transfer</span><span class="tag tag-p">party</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">✈️</span><div><div class="act-name">Volo interno Krabi → Bangkok</div><div class="act-desc">Check-in zona Silom o Sukhumvit.</div></div></div>
+        <div class="act"><span class="act-icon">🌃</span><div><div class="act-name">Sera: rooftop bar + cena a Chinatown</div><div class="act-desc">Un cocktail a 240 metri per il primo impatto con Bangkok. Poi street food a Yaowarat Road.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- FASE 5 -->
-  <div class="phase-header">
-    <div class="phase-line"></div>
-    <div class="phase-title">Fase 5 — Bangkok · 7–9 gen</div>
-    <div class="phase-line"></div>
-  </div>
+  <div class="phase-header"><div class="phase-line"></div><div class="phase-title">Fase 5 — Bangkok · 7–9 gen</div><div class="phase-line"></div></div>
 
-  <!-- G7 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">7</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Grand Palace · Wat Pho · Wat Arun</div>
-          <div class="day-loc">Bangkok · I classici imperdibili</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🏯</span><div><div class="act-name">Mattina: Grand Palace + Wat Phra Kaew</div><div class="act-desc">Aprire alle 8:30 per evitare la ressa. Il tempio del Buddha di Smeraldo è il più sacro della Thailandia. Abbigliamento coprente obbligatorio.</div></div></div>
-          <div class="act"><span class="act-icon">🛕</span><div><div class="act-name">Wat Pho + massaggio tradizionale (1h)</div><div class="act-desc">Buddha sdraiato da 46 metri. Il massaggio fatto qui, dove è nato, vale ogni centesimo.</div></div></div>
-          <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Pomeriggio: battello per Wat Arun + khlongs</div><div class="act-desc">Traghetto pubblico 4 baht fino alla sponda opposta. Wat Arun al tramonto con le guglie rivestite di porcellana. Poi longtail boat sui canali nascosti.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Grand Palace · Wat Pho · Wat Arun</div><div class="day-loc">Bangkok · I classici imperdibili</div><div class="day-tags"><span class="tag tag-a">avventura</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🏯</span><div><div class="act-name">Mattina: Grand Palace + Wat Phra Kaew</div><div class="act-desc">Aprire alle 8:30 per evitare la ressa. Il tempio del Buddha di Smeraldo è il più sacro della Thailandia. Abbigliamento coprente obbligatorio.</div></div></div>
+        <div class="act"><span class="act-icon">🛕</span><div><div class="act-name">Wat Pho + massaggio tradizionale</div><div class="act-desc">Buddha sdraiato da 46 metri. Il massaggio fatto qui, dove è nato.</div></div></div>
+        <div class="act"><span class="act-icon">⛵</span><div><div class="act-name">Pomeriggio: battello per Wat Arun + khlongs</div><div class="act-desc">Wat Arun al tramonto con le guglie rivestite di porcellana. Poi longtail boat sui canali nascosti.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G8 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">8</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Day trip ad Ayutthaya in bici</div>
-          <div class="day-loc">Patrimonio UNESCO · 1h30 da Bangkok in treno</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
+      <div class="day-header-row"><div><div class="day-title-text">Day trip ad Ayutthaya in bici</div><div class="day-loc">Patrimonio UNESCO · 1h30 da Bangkok in treno</div><div class="day-tags"><span class="tag tag-a">avventura</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🚂</span><div><div class="act-name">Treno locale Bangkok → Ayutthaya</div><div class="act-desc">Esperienza local autentica. Bici a noleggio fuori dalla stazione.</div></div></div>
+        <div class="act"><span class="act-icon">🏛️</span><div><div class="act-name">Parco Archeologico UNESCO in bici</div><div class="act-desc">Wat Phra Mahathat con la testa del Buddha nelle radici degli alberi. Wat Chai Watthanaram al tramonto.</div></div></div>
       </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🚂</span><div><div class="act-name">Treno locale Bangkok → Ayutthaya</div><div class="act-desc">Da Hua Lamphong. Treno di terza classe ~20 baht — esperienza local autentica. Bici a noleggio fuori dalla stazione.</div></div></div>
-          <div class="act"><span class="act-icon">🏛️</span><div><div class="act-name">Parco Archeologico UNESCO in bici</div><div class="act-desc">Wat Phra Mahathat con la testa del Buddha nelle radici degli alberi. Wat Pra Si Sanphet con i tre chedi identici. Wat Chai Watthanaram al tramonto.</div></div></div>
-        </div>
-        <div class="tip"><strong>Sera:</strong> Rientro a Bangkok e ultima cena di gruppo a Chinatown — pesce fresco direttamente dalla strada.</div>
+      <div class="tip"><strong>Sera:</strong> Rientro a Bangkok e ultima cena di gruppo a Chinatown.</div>
       </div>
     </div>
   </div>
 
-  <!-- G9 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">9</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Maeklong Market + Chatuchak</div>
-          <div class="day-loc">Bangkok · Il mercato del treno + shopping finale</div>
-          <div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">🚂</span><div><div class="act-name">Mattina: Maeklong Railway Market</div><div class="act-desc">75 km da Bangkok. Il mercato costruito sui binari con il treno che passa tra frutta e tende. Uno spettacolo che si vede solo qui.</div></div></div>
-          <div class="act"><span class="act-icon">🛍️</span><div><div class="act-name">Pomeriggio: Chatuchak Market</div><div class="act-desc">15.000 bancarelle di souvenir, vintage, cibo e oggetti impossibili. Solo sabato e domenica. In alternativa Khaosan Road per l'ultima serata di gruppo.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Maeklong Market + Chatuchak</div><div class="day-loc">Bangkok · Il mercato del treno + shopping finale</div><div class="day-tags"><span class="tag tag-a">avventura</span><span class="tag tag-r">relax</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">🚂</span><div><div class="act-name">Mattina: Maeklong Railway Market</div><div class="act-desc">Il mercato costruito sui binari con il treno che passa tra frutta e tende. Dista 75 km da Bangkok — partire presto, rientro entro le 13:00 per avere il pomeriggio libero.</div></div></div>
+        <div class="act"><span class="act-icon">🛍️</span><div><div class="act-name">Pomeriggio: Chatuchak Market <span style="font-size:.75rem;padding:1px 7px;border:1px solid rgba(61,79,138,.5);color:var(--blue-mid);font-weight:600;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;">solo weekend</span></div><div class="act-desc">15.000 bancarelle di souvenir, vintage, cibo. Aperto solo sabato e domenica — verificare che il 9 gennaio cada nel weekend. In alternativa Khaosan Road per l'ultima serata.</div></div></div>
+        <div class="act"><span class="act-icon">🏙️</span><div><div class="act-name">Sera: King Power Mahanakhon — pavimento di vetro a 314m</div><div class="act-desc">Il grattacielo più alto di Bangkok. L'ascensore in vetro sale in 50 secondi fino al rooftop open-air. Il pavimento trasparente lascia vedere 314 metri di vuoto sotto i piedi. Il modo migliore per salutare Bangkok dall'alto.</div></div></div>
+      </div></div>
     </div>
   </div>
 
-  <!-- G10 -->
   <div class="day-row" onclick="tog(this)">
     <div class="day-num-col"><span class="dn">10</span><span class="dm">Gen</span></div>
     <div class="day-main">
-      <div class="day-header-row">
-        <div>
-          <div class="day-title-text">Volo di rientro da Bangkok</div>
-          <div class="day-loc">Suvarnabhumi Airport · Arrivederci Thailandia</div>
-          <div class="day-tags"><span class="tag tag-t">transfer</span></div>
-        </div>
-        <span class="chev-icon">&#8964;</span>
-      </div>
-      <div class="day-body">
-        <div class="activity-list">
-          <div class="act"><span class="act-icon">✈️</span><div><div class="act-name">Airport Rail Link → Suvarnabhumi</div><div class="act-desc">Da Phaya Thai Station, 30 minuti, 45 baht. Molto più rapido del taxi nell'ora di punta. Check-in almeno 3 ore prima per i voli intercontinentali.</div></div></div>
-        </div>
-      </div>
+      <div class="day-header-row"><div><div class="day-title-text">Volo di rientro da Bangkok</div><div class="day-loc">Suvarnabhumi Airport · Arrivederci Thailandia</div><div class="day-tags"><span class="tag tag-t">transfer</span></div></div><span class="chev-icon">&#8964;</span></div>
+      <div class="day-body"><div class="activity-list">
+        <div class="act"><span class="act-icon">✈️</span><div><div class="act-name">Airport Rail Link → Suvarnabhumi</div><div class="act-desc">Da Phaya Thai Station, 30 minuti. Check-in almeno 3 ore prima per i voli intercontinentali.</div></div></div>
+      </div></div>
     </div>
   </div>
 </div>
 
 <!-- VOLI -->
 <div class="flights-section" id="voli">
-  <div class="flights-inner">
-    <p class="section-label">Voli consigliati</p>
-    <h2 class="section-title" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;">Come arrivarci<br><em style="color:var(--gold);">e come tornare</em></h2>
-    <div class="divider"></div>
-    <div class="flight-cards">
-      <div class="flight-card">
-        <div class="flight-route">
-          <div class="flight-city"><div class="flight-iata">FCO</div><div class="flight-city-name">Roma Fiumicino</div></div>
-          <div class="flight-arrow">→</div>
-          <div class="flight-city"><div class="flight-iata">HKT</div><div class="flight-city-name">Phuket</div></div>
-        </div>
-        <div class="flight-detail">
-          <div><div class="fd-label">Data</div><div class="fd-val">29 dicembre 2026</div></div>
-          <div style="text-align:right"><div class="fd-label">Scalo tipico</div><div class="fd-val">1 scalo · 21h 45m</div></div>
-        </div>
-        <div class="flight-detail" style="margin-top:.5rem">
-          <div><div class="fd-label">Durata</div><div class="fd-val">~13–16 ore</div></div>
-          <div style="text-align:right"><div class="fd-label">Compagnie</div><div class="fd-val">Confermato</div></div>
-        </div>
-        <div class="flight-note">Partenza 15:10 da Roma Fiumicino (FCO), Terminal 3. Durata totale 21h 45m con 1 scalo. Arrivo 18:55 a Phuket (HKT), Terminal I. Stato: Confermato.</div>
-      </div>
-      <div class="flight-card">
-        <div class="flight-route">
-          <div class="flight-city"><div class="flight-iata">BKK</div><div class="flight-city-name">Bangkok Suvarnabhumi</div></div>
-          <div class="flight-arrow">→</div>
-          <div class="flight-city"><div class="flight-iata">FCO</div><div class="flight-city-name">Roma Fiumicino</div></div>
-        </div>
-        <div class="flight-detail">
-          <div><div class="fd-label">Data</div><div class="fd-val">10 gennaio 2027</div></div>
-          <div style="text-align:right"><div class="fd-label">Aeroporto</div><div class="fd-val">Suvarnabhumi (BKK)</div></div>
-        </div>
-        <div class="flight-detail" style="margin-top:.5rem">
-          <div><div class="fd-label">Durata</div><div class="fd-val">~13–16 ore</div></div>
-          <div style="text-align:right"><div class="fd-label">Check-in</div><div class="fd-val">3 ore prima</div></div>
-        </div>
-        <div class="flight-note">Usare l'Airport Rail Link da Phaya Thai — 30 minuti, 45 baht. Molto più veloce del taxi nel traffico di Bangkok. Partire dall'hotel almeno 4 ore prima del decollo.</div>
-      </div>
-      <div class="flight-card">
-        <div style="margin-bottom:1rem">
-          <div class="fd-label" style="margin-bottom:.5rem">Volo interno incluso nel pacchetto</div>
-        </div>
-        <div class="flight-route">
-          <div class="flight-city"><div class="flight-iata">KBV</div><div class="flight-city-name">Krabi</div></div>
-          <div class="flight-arrow">→</div>
-          <div class="flight-city"><div class="flight-iata">BKK</div><div class="flight-city-name">Bangkok</div></div>
-        </div>
-        <div class="flight-detail">
-          <div><div class="fd-label">Data</div><div class="fd-val">6 gennaio 2027</div></div>
-          <div style="text-align:right"><div class="fd-label">Durata</div><div class="fd-val">~1 ora</div></div>
-        </div>
-        <div class="flight-detail" style="margin-top:.5rem">
-          <div><div class="fd-label">Compagnie</div><div class="fd-val">AirAsia · Bangkok Airways</div></div>
-          <div style="text-align:right"><div class="fd-label">Costo stimato</div><div class="fd-val">~20–33€</div></div>
-        </div>
-        <div class="flight-note">Prenotare con anticipo su AirAsia.com o bangkokair.com. Risparmia 5 ore di trasferimento via terra.</div>
-      </div>
-    </div>
-  </div>
+ <div class="flights-inner">
+ <p class="section-label">Voli consigliati</p>
+ <h2 class="section-title" style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;text-transform:uppercase;line-height:1;">Come arrivarci<br><em style="color:var(--gold);">e come tornare</em></h2>
+ <div class="divider"></div>
+ <div class="flight-cards">
+ <div class="flight-card">
+ <div class="flight-route">
+ <div class="flight-city"><div class="flight-iata">FCO</div><div class="flight-city-name">Roma Fiumicino</div></div>
+ <div class="flight-arrow">→</div>
+ <div class="flight-city"><div class="flight-iata">HKT</div><div class="flight-city-name">Phuket</div></div>
+ </div>
+ <div class="flight-detail">
+ <div><div class="fd-label">Data</div><div class="fd-val">29 dicembre 2026</div></div>
+ <div style="text-align:right"><div class="fd-label">Scalo tipico</div><div class="fd-val">1 scalo · 21h 45m</div></div>
+ </div>
+ <div class="flight-detail" style="margin-top:.5rem">
+ <div><div class="fd-label">Durata</div><div class="fd-val">~13–16 ore</div></div>
+ <div style="text-align:right"><div class="fd-label">Compagnie</div><div class="fd-val">Confermato</div></div>
+ </div>
+ <div class="flight-note">Partenza 15:10 da Roma Fiumicino (FCO), Terminal 3. Durata totale 21h 45m con 1 scalo. Arrivo 18:55 a Phuket (HKT), Terminal I. Stato: Confermato.</div>
+ </div>
+ <div class="flight-card">
+ <div class="flight-route">
+ <div class="flight-city"><div class="flight-iata">BKK</div><div class="flight-city-name">Bangkok Suvarnabhumi</div></div>
+ <div class="flight-arrow">→</div>
+ <div class="flight-city"><div class="flight-iata">FCO</div><div class="flight-city-name">Roma Fiumicino</div></div>
+ </div>
+ <div class="flight-detail">
+ <div><div class="fd-label">Data</div><div class="fd-val">10 gennaio 2027</div></div>
+ <div style="text-align:right"><div class="fd-label">Aeroporto</div><div class="fd-val">Suvarnabhumi (BKK)</div></div>
+ </div>
+ <div class="flight-detail" style="margin-top:.5rem">
+ <div><div class="fd-label">Durata</div><div class="fd-val">~13–16 ore</div></div>
+ <div style="text-align:right"><div class="fd-label">Check-in</div><div class="fd-val">3 ore prima</div></div>
+ </div>
+ <div class="flight-note">Usare l'Airport Rail Link da Phaya Thai — 30 minuti, 45 baht. Molto più veloce del taxi nel traffico di Bangkok. Partire dall'hotel almeno 4 ore prima del decollo.</div>
+ </div>
+ <div class="flight-card">
+ <div style="margin-bottom:1rem">
+ <div class="fd-label" style="margin-bottom:.5rem">Volo interno incluso nel pacchetto</div>
+ </div>
+ <div class="flight-route">
+ <div class="flight-city"><div class="flight-iata">KBV</div><div class="flight-city-name">Krabi</div></div>
+ <div class="flight-arrow">→</div>
+ <div class="flight-city"><div class="flight-iata">BKK</div><div class="flight-city-name">Bangkok</div></div>
+ </div>
+ <div class="flight-detail">
+ <div><div class="fd-label">Data</div><div class="fd-val">6 gennaio 2027</div></div>
+ <div style="text-align:right"><div class="fd-label">Durata</div><div class="fd-val">~1 ora</div></div>
+ </div>
+ <div class="flight-detail" style="margin-top:.5rem">
+ <div><div class="fd-label">Compagnie</div><div class="fd-val">AirAsia · Bangkok Airways</div></div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ </div>
 </div>
 
 <!-- BUDGET -->
 <div class="budget-section">
-  <p class="section-label">Trasparenza totale</p>
-  <h2 class="section-title" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;">Cosa include<br><em style="color:var(--gold);">il tuo investimento</em></h2>
-  <div class="divider"></div>
-  <div class="budget-grid">
-    <div class="budget-item"><div class="budget-cat">Alloggi</div><div class="budget-val">incluso<span></span></div><div class="budget-sub">12 notti · mix resort + guesthouse</div></div>
-    <div class="budget-item"><div class="budget-cat">Trasporti locali</div><div class="budget-val">incluso<span></span></div><div class="budget-sub">traghetti, speedboat, bus</div></div>
-    <div class="budget-item"><div class="budget-cat">Escursioni</div><div class="budget-val">incluso<span></span></div><div class="budget-sub">island hopping, kayak, tour</div></div>
-    <div class="budget-item"><div class="budget-cat">Cibo & bevande</div><div class="budget-val">incluso<span></span></div><div class="budget-sub">~12€ al giorno mangiando thai</div></div>
-    <div class="budget-item"><div class="budget-cat">Volo interno</div><div class="budget-val">incluso<span></span></div><div class="budget-sub">Krabi → Bangkok</div></div>
-    <div class="budget-item"><div class="budget-cat">Organizzazione</div><div class="budget-val">incluso<span></span></div><div class="budget-sub">prenotazioni, logistica, supporto</div></div>
-  </div>
-  <div class="budget-total">
-    <div class="budget-total-label">Quota di partecipazione · volo escluso</div>
-    <div class="budget-total-val">1.490 €</div>
-    <div class="budget-total-note">Il volo intercontinentale Roma ↔ Thailandia è escluso e a carico di ciascun partecipante (stima ~1.100€ prenotando ora).</div>
-  </div>
+ <p class="section-label">La quota include</p>
+ <h2 class="section-title" style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;text-transform:uppercase;line-height:1;">Cosa include<br><em style="color:var(--gold);">la tariffa</em></h2>
+ <div class="divider"></div>
+ <div class="budget-grid">
+ <div class="budget-item"><div class="budget-cat">Alloggi</div><div class="budget-val">✓</div><div class="budget-sub">12 notti · mix hotel e guest house</div></div>
+ <div class="budget-item"><div class="budget-cat">Trasporti locali</div><div class="budget-val">✓</div><div class="budget-sub">traghetti, speedboat, transfer</div></div>
+ <div class="budget-item"><div class="budget-cat">Escursioni</div><div class="budget-val">✓</div><div class="budget-sub">island hopping, kayak, tour guidati</div></div>
+ <div class="budget-item"><div class="budget-cat">Volo interno</div><div class="budget-val">✓</div><div class="budget-sub">Krabi → Bangkok</div></div>
+ <div class="budget-item"><div class="budget-cat">Organizzazione</div><div class="budget-val">✓</div><div class="budget-sub">logistica, prenotazioni, supporto</div></div>
+    <div class="budget-item"><div class="budget-cat">Assicurazione</div><div class="budget-val">✓</div><div class="budget-sub">copertura base Heymondo</div></div>
+    <div class="budget-item"><div class="budget-cat">Pick up & Drop off</div><div class="budget-val">✓</div><div class="budget-sub">transfer aeroportuale incluso</div></div>
+    <div class="budget-item"><div class="budget-cat">Guida in italiano</div><div class="budget-val">✓</div><div class="budget-sub">coordinatore madrelingua italiana</div></div>
+ </div>
+ <div class="budget-total">
+ <div class="budget-total-label">Quota di partecipazione · volo escluso</div>
+ <div class="budget-total-val">1.490 €</div>
+ <div class="budget-total-note">Il volo intercontinentale Roma ↔ Thailandia è a carico di ciascun partecipante.</div>
+ </div>
+ <div style="margin-top:2rem;padding:1.5rem 2rem;border:1px solid rgba(201,169,110,.15);background:var(--dark-3);">
+ <div class="budget-total-label" style="margin-bottom:1rem;">La tariffa non include</div>
+ <div style="display:flex;flex-direction:column;gap:.5rem;">
+ <div style="display:flex;gap:.75rem;align-items:flex-start;font-size:.875rem;color:var(--text-muted);"><span style="color:var(--coral);">—</span> Volo intercontinentale Roma ↔ Thailandia</div>
+ <div style="display:flex;gap:.75rem;align-items:flex-start;font-size:.875rem;color:var(--text-muted);"><span style="color:var(--coral);">—</span> Pasti non inclusi nelle strutture</div>
+ <div style="display:flex;gap:.75rem;align-items:flex-start;font-size:.875rem;color:var(--text-muted);"><span style="color:var(--coral);">—</span> Bevande e spese personali</div>
+ <div style="display:flex;gap:.75rem;align-items:flex-start;font-size:.875rem;color:var(--text-muted);"><span style="color:var(--coral);">—</span> Assicurazione di viaggio (per prenotazioni dopo il 10 settembre)</div>
+ </div>
+ </div>
 </div>
 
 <!-- INFO UTILI -->
 <div class="info-section" id="info">
-  <div class="info-inner">
-    <p class="section-label">Prima di partire</p>
-    <h2 class="section-title" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;">Tutto quello<br><em style="color:var(--gold);">che devi sapere</em></h2>
-    <div class="divider"></div>
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-icon">🛂</div>
-        <div class="info-title">Visti e documenti</div>
-        <div class="info-body">
-          La Thailandia <strong>non richiede il visto</strong> per i cittadini italiani. Il passaporto deve essere integro, con almeno <strong>2 pagine libere</strong> e validità residua di almeno <strong>6 mesi</strong> dall'ingresso.<br><br>
-          <strong>Attenzione:</strong> la legge thai considera reati la presenza di <a href="https://www.viaggiavventurenelmondo.it/articoli/visti-thailandia" target="_blank">tatuaggi con tema buddhista</a> e il possesso della sigaretta elettronica.<br><br>
-          A partire dal 1 maggio 2025, tutti i viaggiatori non thailandesi devono compilare entro 72 ore dall'ingresso il modulo online <strong>Thailand Digital Arrival Card (TDAC)</strong>: <a href="https://tdac.immigration.go.th/arrival-card/#/home" target="_blank">tdac.immigration.go.th</a>. Scaricare la conferma da mostrare alla frontiera.
-          <div class="info-alert">I requisiti indicati valgono per cittadini italiani. I partecipanti di altra nazionalità devono documentarsi autonomamente presso la propria rappresentanza consolare.</div>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">💉</div>
-        <div class="info-title">Vaccinazioni e salute</div>
-        <div class="info-body">
-          Non ci sono vaccinazioni obbligatorie per la Thailandia.<br><br>
-          È consigliata la <strong>profilassi antimalarica</strong> per chi si sposta fuori dalle zone turistiche principali. Nelle isole e a Bangkok il rischio è minimo.<br><br>
-          Consultare il proprio medico almeno 4–6 settimane prima della partenza per eventuali integrazioni vaccinali (epatite A, tifoidea, tetano).
-          <div class="info-alert">Portare sempre con sé un kit base: antidolorifico, antidiarroico, crema solare SPF 50+, repellente per insetti e reintegri salini per i giorni di mare.</div>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🌍</div>
-        <div class="info-title">Viaggiare sicuri</div>
-        <div class="info-body">
-          Consultare sempre il sito del <strong>Ministero degli Esteri</strong> prima di partire:<br>
-          <a href="https://www.viaggiaresicuri.it" target="_blank">viaggiaresicuri.it</a><br><br>
-          Troverai informazioni aggiornate su sicurezza, clima, sanità, documenti di viaggio, visti e valuta per la Thailandia.<br><br>
-          Il numero di emergenza italiano all'estero è la <strong>Unità di Crisi del MAECI: +39 06 3691</strong>.
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">💱</div>
-        <div class="info-title">Soldi e pagamenti</div>
-        <div class="info-body">
-          La valuta è il <strong>Baht Thailandese (THB)</strong>. 1€ ≈ 37–38 baht (verificare al momento del viaggio).<br><br>
-          Prelevare al bancomat locale (commissione ~220 baht a prelievo) o cambiare in agenzia — <strong>mai in hotel</strong>. Le migliori quotazioni si trovano nelle agenzie SuperRich in città.<br><br>
-          Carta di credito accettata nei resort e ristoranti strutturati. Street food, traghetti e mercati: <strong>solo contanti</strong>. Portare sempre banconote piccole (20, 50, 100 baht).
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">📱</div>
-        <div class="info-title">Connettività e app utili</div>
-        <div class="info-body">
-          SIM locale: acquistare all'aeroporto di Phuket (~300 baht per 30 giorni dati illimitati). Operatori consigliati: DTAC, TrueMove, AIS.<br><br>
-          <strong>App indispensabili:</strong><br>
-          — <strong>Grab</strong>: taxi e consegne<br>
-          — <strong>Google Maps</strong>: funziona offline<br>
-          — <strong>XE Currency</strong>: cambio valute<br>
-          — <strong>Klook</strong>: prenotazione tour<br>
-          — <strong>Google Translate</strong>: con fotocamera per menù
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🌤️</div>
-        <div class="info-title">Clima e cosa portare</div>
-        <div class="info-body">
-          Fine dicembre–gennaio è la <strong>stagione secca</strong> nel Mar delle Andamane: il periodo migliore dell'anno. Temperature 28–34°C, pochissima pioggia, mare calmo e visibilità subacquea eccellente.<br><br>
-          A Bangkok qualche grado in meno la sera (~24°C) — portare un golf leggero. Nei templi spalle e gambe coperte sono obbligatorie.
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="info-inner">
+ <p class="section-label">Prima di partire</p>
+ <h2 class="section-title" style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3rem);font-weight:800;text-transform:uppercase;line-height:1;">Tutto quello<br><em style="color:var(--gold);">che devi sapere</em></h2>
+ <div class="divider"></div>
+ <div class="info-grid">
+ <div class="info-card">
+ <div class="info-icon">🛂</div>
+ <div class="info-title">Visti e documenti</div>
+ <div class="info-body">
+ La Thailandia <strong>non richiede il visto</strong> per i cittadini italiani. Il passaporto deve essere integro, con almeno <strong>2 pagine libere</strong> e validità residua di almeno <strong>6 mesi</strong> dall'ingresso.<br><br>
+ <strong>Attenzione:</strong> la legge thai considera reati la presenza di <a href="https://www.viaggiavventurenelmondo.it/articoli/visti-thailandia" target="_blank">tatuaggi con tema buddhista</a> e il possesso della sigaretta elettronica.<br><br>
+ A partire dal 1 maggio 2025, tutti i viaggiatori non thailandesi devono compilare entro 72 ore dall'ingresso il modulo online <strong>Thailand Digital Arrival Card (TDAC)</strong>: <a href="https://tdac.immigration.go.th/arrival-card/#/home" target="_blank">tdac.immigration.go.th</a>. Scaricare la conferma da mostrare alla frontiera.
+ <div class="info-alert">I requisiti indicati valgono per cittadini italiani. I partecipanti di altra nazionalità devono documentarsi autonomamente presso la propria rappresentanza consolare.</div>
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-icon">💉</div>
+ <div class="info-title">Vaccinazioni e salute</div>
+ <div class="info-body">
+ Non ci sono vaccinazioni obbligatorie per la Thailandia.<br><br>
+ È consigliata la <strong>profilassi antimalarica</strong> per chi si sposta fuori dalle zone turistiche principali. Nelle isole e a Bangkok il rischio è minimo.<br><br>
+ Consultare il proprio medico almeno 4–6 settimane prima della partenza per eventuali integrazioni vaccinali (epatite A, tifoidea, tetano).
+ <div class="info-alert">Portare sempre con sé un kit base: antidolorifico, antidiarroico, crema solare SPF 50+, repellente per insetti e reintegri salini per i giorni di mare.</div>
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-icon">🌍</div>
+ <div class="info-title">Viaggiare sicuri</div>
+ <div class="info-body">
+ Consultare sempre il sito del <strong>Ministero degli Esteri</strong> prima di partire:<br>
+ <a href="https://www.viaggiaresicuri.it" target="_blank">viaggiaresicuri.it</a><br><br>
+ Troverai informazioni aggiornate su sicurezza, clima, sanità, documenti di viaggio, visti e valuta per la Thailandia.<br><br>
+ Il numero di emergenza italiano all'estero è la <strong>Unità di Crisi del MAECI: +39 06 3691</strong>.
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-icon">💱</div>
+ <div class="info-title">Soldi e pagamenti</div>
+ <div class="info-body">
+ La valuta è il <strong>Baht Thailandese (THB)</strong>. 1€ ≈ 37–38 baht (verificare al momento del viaggio).<br><br>
+ Prelevare al bancomat locale (commissione <strong>mai in hotel</strong>. Le migliori quotazioni si trovano nelle agenzie SuperRich in città.<br><br>
+ Carta di credito accettata nei resort e ristoranti strutturati. Street food, traghetti e mercati: <strong>solo contanti</strong>. Portare sempre banconote piccole (20, 50, 100 baht).
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-icon">📱</div>
+ <div class="info-title">Connettività e app utili</div>
+ <div class="info-body">
+ SIM locale: acquistare all'aeroporto di Phuket (. Operatori consigliati: DTAC, TrueMove, AIS.<br><br>
+ <strong>App indispensabili:</strong><br>
+ — <strong>Grab</strong>: taxi e consegne<br>
+ — <strong>Google Maps</strong>: funziona offline<br>
+ — <strong>XE Currency</strong>: cambio valute<br>
+ — <strong>Klook</strong>: prenotazione tour<br>
+ — <strong>Google Translate</strong>: con fotocamera per menù
+ </div>
+ </div>
+ <div class="info-card">
+ <div class="info-icon">🌤️</div>
+ <div class="info-title">Clima e cosa portare</div>
+ <div class="info-body">
+ Fine dicembre–gennaio è la <strong>stagione secca</strong> nel Mar delle Andamane: il periodo migliore dell'anno. Temperature 28–34°C, pochissima pioggia, mare calmo e visibilità subacquea eccellente.<br><br>
+ A Bangkok qualche grado in meno la sera (~24°C) — portare un golf leggero. Nei templi spalle e gambe coperte sono obbligatorie.
+ </div>
+ </div>
+ </div>
+ </div>
 </div>
 
 <!-- COSA PORTARE -->
 <section>
-  <p class="section-label">Checklist</p>
-  <h2 class="section-title">Cosa mettere<br><em style="color:var(--gold);font-family:'Cormorant Garamond',serif;font-style:italic;">nello zaino</em></h2>
-  <div class="divider"></div>
-  <div class="pack-grid">
-    <div class="pack-col">
-      <div class="pack-col-title">Documenti</div>
-      <ul>
-        <li>Passaporto (validità +6 mesi)</li>
-        <li>TDAC compilata e scaricata</li>
-        <li>Assicurazione di viaggio</li>
-        <li>Copia digitale di tutto</li>
-        <li>Carta di credito + contanti</li>
-      </ul>
-    </div>
-    <div class="pack-col">
-      <div class="pack-col-title">Abbigliamento</div>
-      <ul>
-        <li>Costumi (2–3)</li>
-        <li>Shorts e t-shirt leggeri</li>
-        <li>Pantaloni lunghi e maglietta coprente (templi)</li>
-        <li>Sandali + scarpe comode</li>
-        <li>Golf leggero per Bangkok sera</li>
-      </ul>
-    </div>
-    <div class="pack-col">
-      <div class="pack-col-title">Salute & mare</div>
-      <ul>
-        <li>Crema solare SPF 50+ (abbondante)</li>
-        <li>Repellente per insetti</li>
-        <li>Maschera da snorkeling personale</li>
-        <li>Medicinali base + antidiarroico</li>
-        <li>Torcia impermeabile (Emerald Cave)</li>
-      </ul>
-    </div>
-    <div class="pack-col">
-      <div class="pack-col-title">Tech</div>
-      <ul>
-        <li>Adattatore tipo A/B (spina US)</li>
-        <li>Powerbank</li>
-        <li>Borsa impermeabile per barca</li>
-        <li>GoPro o action cam</li>
-        <li>Grab + Google Maps offline</li>
-      </ul>
+ <p class="section-label">Checklist</p>
+ <h2 class="section-title">Cosa mettere<br><em style="color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-style:italic;">nello zaino</em></h2>
+ <div class="divider"></div>
+ <div class="pack-grid">
+ <div class="pack-col">
+ <div class="pack-col-title">Documenti</div>
+ <ul>
+ <li>Passaporto (validità +6 mesi)</li>
+ <li>TDAC compilata e scaricata</li>
+ <li>Assicurazione di viaggio</li>
+ <li>Copia digitale di tutto</li>
+ <li>Carta di credito + contanti</li>
+ </ul>
+ </div>
+ <div class="pack-col">
+ <div class="pack-col-title">Abbigliamento</div>
+ <ul>
+ <li>Costumi (2–3)</li>
+ <li>Shorts e t-shirt leggeri</li>
+ <li>Pantaloni lunghi e maglietta coprente (templi)</li>
+ <li>Sandali + scarpe comode</li>
+ <li>Golf leggero per Bangkok sera</li>
+ </ul>
+ </div>
+ <div class="pack-col">
+ <div class="pack-col-title">Salute & mare</div>
+ <ul>
+ <li>Crema solare SPF 50+ (abbondante)</li>
+ <li>Repellente per insetti</li>
+ <li>Maschera da snorkeling personale</li>
+ <li>Medicinali base + antidiarroico</li>
+ <li>Torcia impermeabile (Emerald Cave)</li>
+ </ul>
+ </div>
+ <div class="pack-col">
+ <div class="pack-col-title">Tech</div>
+ <ul>
+ <li>Adattatore tipo A/B (spina US)</li>
+ <li>Powerbank</li>
+ <li>Borsa impermeabile per barca</li>
+ <li>GoPro o action cam</li>
+ <li>Grab + Google Maps offline</li>
+ </ul>
+ </div>
+ </div>
+</section>
+
+<!-- NOTE IMPORTANTI -->
+<div style="background:var(--dark-2);padding:4rem 2rem;border-top:1px solid rgba(201,169,110,.15);">
+  <div style="max-width:900px;margin:0 auto;">
+    <p class="section-label">Prima di confermare</p>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.1;margin-bottom:2rem;">Note importanti</h2>
+    <div class="divider"></div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:rgba(201,169,110,.1);margin-bottom:2rem;">
+
+      <div style="background:var(--dark-3);padding:1.75rem;border-top:2px solid var(--gold);">
+        <div style="font-size:1.3rem;margin-bottom:.75rem;">💳</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:400;color:var(--text);margin-bottom:.75rem;">Come confermare il posto</div>
+        <div style="font-size:.825rem;color:var(--text-muted);line-height:1.7;">
+          Per bloccare il posto è richiesto un acconto di <strong style="color:var(--text);">290€</strong> al momento della prenotazione del volo.<br><br>
+          Il saldo dell'intera quota dovrà essere versato entro il <strong style="color:var(--text);">29 novembre 2026</strong>, un mese prima della partenza.
+        </div>
+      </div>
+
+      <div style="background:var(--dark-3);padding:1.75rem;border-top:2px solid rgba(201,169,110,.3);">
+        <div style="font-size:1.3rem;margin-bottom:.75rem;">🛡️</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:400;color:var(--text);margin-bottom:.75rem;">Assicurazione di viaggio</div>
+        <div style="font-size:.825rem;color:var(--text-muted);line-height:1.7;">
+          Per chi prenota entro il <strong style="color:var(--text);">10 settembre</strong>, l'assicurazione di viaggio <strong style="color:var(--text);">Heymondo</strong> è inclusa nella quota.
+        </div>
+      </div>
+
+      <div style="background:var(--dark-3);padding:1.75rem;border-top:2px solid rgba(201,169,110,.3);">
+        <div style="font-size:1.3rem;margin-bottom:.75rem;">📋</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:400;color:var(--text);margin-bottom:.75rem;">Variazioni e imprevisti</div>
+        <div style="font-size:.825rem;color:var(--text-muted);line-height:1.7;">
+          Il programma è indicativo e può subire variazioni per cause meteo, logistiche o di forza maggiore. Eventuali modifiche saranno comunicate tempestivamente e gestite nel miglior modo possibile.
+        </div>
+      </div>
+
+      <div style="background:var(--dark-3);padding:1.75rem;border-top:2px solid rgba(201,169,110,.3);">
+        <div style="font-size:1.3rem;margin-bottom:.75rem;">✈️</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:400;color:var(--text);margin-bottom:.75rem;">Volo intercontinentale</div>
+        <div style="font-size:.825rem;color:var(--text-muted);line-height:1.7;">
+          Il volo Roma ↔ Thailandia è a carico di ciascun partecipante e va prenotato autonomamente. Il coordinatore non è responsabile di eventuali disservizi aerei o variazioni di orario.
+        </div>
+      </div>
+
+      <div style="background:var(--dark-3);padding:1.75rem;border-top:2px solid rgba(201,169,110,.3);">
+        <div style="font-size:1.3rem;margin-bottom:.75rem;">💰</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:400;color:var(--text);margin-bottom:.75rem;">Spese non incluse</div>
+        <div style="font-size:.825rem;color:var(--text-muted);line-height:1.7;">
+          Sono a carico del partecipante: pasti non inclusi nelle strutture, bevande, mance, spese personali e qualsiasi attività opzionale non prevista nel programma.
+        </div>
+      </div>
+
+      <div style="background:var(--dark-3);padding:1.75rem;border-top:2px solid rgba(201,169,110,.3);">
+        <div style="font-size:1.3rem;margin-bottom:.75rem;">👥</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:400;color:var(--text);margin-bottom:.75rem;">Numero partecipanti</div>
+        <div style="font-size:.825rem;color:var(--text-muted);line-height:1.7;">
+          I posti sono limitati. Contattami per verificare la disponibilità.
+        </div>
+      </div>
+
     </div>
   </div>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--gold);margin-bottom:1rem;">Hai domande?</p>
-  <p>Per informazioni, prenotazioni e chiarimenti contattami.<br>
-  Il programma potrebbe subire variazioni per cause meteorologiche o logistiche.<br><br>
-  <strong>Quota: 1.490€ a persona · Volo intercontinentale escluso</strong><br>
-  <span style="font-size:.75rem;color:var(--text-muted);">Thailandia · Dicembre 2026 – Gennaio 2027</span></p>
+ <p style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:300;color:var(--gold);margin-bottom:1rem;">Hai domande?</p>
+ <p>Per informazioni, prenotazioni e chiarimenti contattami.<br>
+ Il programma potrebbe subire variazioni per cause meteorologiche o logistiche.<br><br>
+ <strong>Quota: 1.490€ a persona · Volo intercontinentale escluso</strong><br>
+ <span style="font-size:.75rem;color:var(--text-muted);">Thailandia · Dicembre 2026 – Gennaio 2027</span></p>
 </footer>
 
 <script>
 function tog(row){
-  const body = row.querySelector('.day-body');
-  const chev = row.querySelector('.chev-icon');
-  const isOpen = body.classList.contains('open');
-  body.classList.toggle('open', !isOpen);
-  chev.classList.toggle('open', !isOpen);
+ const body = row.querySelector('.day-body');
+ const chev = row.querySelector('.chev-icon');
+ const isOpen = body.classList.contains('open');
+ body.classList.toggle('open', !isOpen);
+ chev.classList.toggle('open', !isOpen);
 }
 </script>
 </body>
